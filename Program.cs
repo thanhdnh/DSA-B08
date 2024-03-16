@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-public class Vertex
+﻿public class Vertex
 {
     public bool wasVisited;
     public string label;
@@ -110,18 +107,19 @@ public class Program
         graph.AddVertex("I"); graph.AddVertex("J");//8 9
         graph.AddVertex("K"); graph.AddVertex("L");//10 11
         graph.AddVertex("M");//12
-        graph.AddEdge(0, 1); graph.AddEdge(1, 0);
-        graph.AddEdge(0, 4); graph.AddEdge(4, 0);
-        graph.AddEdge(0, 7); graph.AddEdge(7, 0);
-        graph.AddEdge(0, 10); graph.AddEdge(0, 10);
-        graph.AddEdge(1, 2); graph.AddEdge(2, 1);
-        graph.AddEdge(2, 3); graph.AddEdge(3, 2);
-        graph.AddEdge(4, 5); graph.AddEdge(5, 4);
-        graph.AddEdge(5, 6); graph.AddEdge(6, 5);
-        graph.AddEdge(7, 8); graph.AddEdge(8, 7);
-        graph.AddEdge(8, 9); graph.AddEdge(9, 8);
-        graph.AddEdge(10, 11); graph.AddEdge(11, 10);
-        graph.AddEdge(11, 12); graph.AddEdge(12, 11);
+        //graph.AddEdge("A", "B");
+        graph.AddEdge(0, 1); //graph.AddEdge(1, 0);
+        graph.AddEdge(0, 4); //graph.AddEdge(4, 0);
+        graph.AddEdge(0, 7); //graph.AddEdge(7, 0);
+        graph.AddEdge(0, 10); //graph.AddEdge(10, 0);
+        graph.AddEdge(1, 2); //graph.AddEdge(2, 1);
+        graph.AddEdge(2, 3); //graph.AddEdge(3, 2);
+        graph.AddEdge(4, 5); //graph.AddEdge(5, 4);
+        graph.AddEdge(5, 6); //graph.AddEdge(6, 5);
+        graph.AddEdge(7, 8); //graph.AddEdge(8, 7);
+        graph.AddEdge(8, 9); //graph.AddEdge(9, 8);
+        graph.AddEdge(10, 11); //graph.AddEdge(11, 10);
+        graph.AddEdge(11, 12); //graph.AddEdge(12, 11);
         Console.Write("DFS: ");
         graph.DepthFirstSearch();
         Console.Write("\nBFS: ");
