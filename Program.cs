@@ -34,6 +34,17 @@ public class Graph
         adjMatrix[start, eend] = 1;
         adjMatrix[eend, start] = 1;
     }
+    public void AddEdge(string start, string eend){
+      int x = FindVertexLabel(start);
+      int y = FindVertexLabel(eend);
+      AddEdge(x, y);
+    }
+    public int FindVertexLabel(string label){
+      for(int i=0; i<vertices.Length; i++)
+        if(vertices[i].label.Equals(label))
+          return i;
+      return -1;
+    }
     public void ShowVertex(int v)
     {
         Console.Write(vertices[v].label + " ");
@@ -107,8 +118,8 @@ public class Program
         graph.AddVertex("I"); graph.AddVertex("J");//8 9
         graph.AddVertex("K"); graph.AddVertex("L");//10 11
         graph.AddVertex("M");//12
-        //graph.AddEdge("A", "B");
-        graph.AddEdge(0, 1); //graph.AddEdge(1, 0);
+        graph.AddEdge("A", "B");
+        //graph.AddEdge(0, 1); //graph.AddEdge(1, 0);
         graph.AddEdge(0, 4); //graph.AddEdge(4, 0);
         graph.AddEdge(0, 7); //graph.AddEdge(7, 0);
         graph.AddEdge(0, 10); //graph.AddEdge(10, 0);
